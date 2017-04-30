@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="../javascripts/dropdown1.js"></script>
+  <script src="../javascripts/Mascotchange.js"></script>
+  <script src="../javascripts/BookEventsPg2.js"></script>
+  <script type="text/javascript" src="../javascripts/datepicktest.js"></script>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet">
+  <title>Tyke TV - Book Events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../stylesheets/Logoutcss.css" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/Bookeventspg2.css" rel="stylesheet" type="text/css" />
+  <link href="../stylesheets/datepickstyle.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="page">
+    <div class="header">
+      <h1 class="title"><a href="selectaccount.htm">Tyke TV</a></h1>
+      <div class="dragon-logo">
+        <img id="dragon-img" class="img-responsive" src="https://res.cloudinary.com/dqn5eqmwt/image/upload/v1492759791/dragon_parent_1_j2belt.png" />
+      </div>
+      
+      <!-- This div creates a dropdown menu with various navigation options -->
+      <div class="menu">
+        <img id="menu_img" src="https://res.cloudinary.com/dqn5eqmwt/image/upload/v1493014197/Menu_jwzusk.svg">
+        <div id="myDropdown" class="dropdown-content">
+          <a id="Edprof">Edit Profile</a>
+          <a id="Deprof">Delete Profile</a>
+          <a id="Chistory">Check History</a>
+          <a id="Bevents">Book Events</a>
+          <a id="Getout">Logout</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- This div contains the navigation tabs between the two functionalities for a parent i.e.Booking events and Checking Activity -->
+    <div class="tab">
+      <button class="tablinks" id="BookEventsButton">
+        <p><img class="tabicons" src="https://res.cloudinary.com/dqn5eqmwt/image/upload/v1493014195/BookEvents_bv0pvp.svg"> Events</p>
+      </button>
+      <button id="checkActivityButton" class="tablinks">
+        <p><img class="tabicons" src="https://res.cloudinary.com/dqn5eqmwt/image/upload/v1493014197/Historyicon2_ayes8a.svg"> History</p>
+      </button>
+    </div>
+    
+    <!-- The section is divided into three parts: verticalbar, right section, left section -->
+    <div class="section">
+      
+      <!-- The is the div for vertical progress bar for book events functionality. This progress bar is only visible in desktop mode (controlled by CSS) -->
+      <div class="verticalbar">
+        <img class="verticalbare" src="https://res.cloudinary.com/dqn5eqmwt/image/upload/v1493014199/Vertical_bare_2_iarhj9.png">
+      </div>
+      
+      <!-- This div block contains date and time picker for the event -->
+      <div class="rightsection">
+        <div class="mobileheader">
+          <p> Step 2/3: Select Date and Time</p>
+        </div>
+        
+        <!-- Section for date picker/calendar -->
+        <section class="wrapper">
+          <h1>When is the party?</h1>
+          <br>
+          <input type="text" id="theInput" placeholder="Select a Date" />
+        </section>
+        
+        <!-- Section for time picker dropup menu -->
+        <div class="rightbottom">
+          <div class="rightbottomcontainer">
+            <h1>At what time?</h1>
+            <br>
+            <br>
+            <select id="timepick" name="Select a Time slot" />
+            <option disabled selected>Select a Time slot</option>
+            <option value="9:00 - 11:00">9:00 - 11:00</option>
+            <option value="11:00 - 13:00">11:00 - 13:00</option>
+            <option value="13:00 - 15:00">13:00 - 15:00</option>
+            <option value="15:00 - 17:00">15:00 - 17:00</option>
+            <option value="17:00 - 19:00">17:00 - 19:00</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Continue button -->
+        <button class="btn-default" id="continue-page2Button">
+          <p class="buttontext">CONTINUE</p>
+        </button>
+      </div>
+    
+      <!-- Section to show dragon family image. Visible only in desktop (controlled by CSS) -->
+      <div class="leftsection">
+        <img class="leftimg" src="http://res.cloudinary.com/dqn5eqmwt/image/upload/v1492759793/dragonfamily_zeqsbg.png">
+      </div>
+    </div>
+  
+    <!-- Footer of the page -->
+    <div class="footer">
+      <p>Copyright@TykeTV.com</p>
+    </div>
+  
+    <!-- Code for logout popup -->
+    <div id="popup3" class="popuplg">
+      <img class="dragon" src="https://res.cloudinary.com/dqn5eqmwt/image/upload/v1492759790/dragon_baby_3_vnpp58.png">
+      <p> Are you leaving me? </p>
+      <div class="buttons">
+        <button type="button" class="btn-yes" id="yes-button">
+          <p class="button">Yes</p>
+        </button>
+        <button type="button" class="btn-no" id="no-button" onclick="cancellogout()">
+          <p class="button">No</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
